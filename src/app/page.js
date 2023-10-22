@@ -7,8 +7,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      {/* <h1>Welcome To Next.JS</h1>
-      <h2>Time: 50:15</h2> */}
+      <h1>Welcome To Next.JS</h1>
+      <h2>Time: 1:29:15</h2>
       <Section1 />
       <Section2 />
       <Section3 />
