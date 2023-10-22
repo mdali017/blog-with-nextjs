@@ -25,7 +25,7 @@ const Section1 = () => {
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            // delay: 1000,
+            delay: 1000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -52,7 +52,6 @@ const Slide = () => {
     <div className="grid grid-cols-2 gap-8 items-center">
       <div className="images ">
         <Link href={"/"}>
-          {/* <a> */}
           <Image
             src={
               "https://images.pexels.com/photos/1509582/pexels-photo-1509582.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -61,7 +60,6 @@ const Slide = () => {
             width={600}
             height={400}
           />
-          {/* </a> */}
         </Link>
       </div>
       <div className="info">
@@ -78,15 +76,15 @@ const Slide = () => {
             Please provide some details or keywords related to your blog, and
             I'll be happy to generate a title for you
           </Link>
-          <p className="text-sm mt-3 text-gray-500">
-            Health is a state of complete physical, mental, and social
-            well-being, where one is free from illness, injury, or discomfort.
-            It encompasses not only the absence of disease but also the ability
-            to lead a fulfilling and active life, allowing individuals to reach
-            their full potential and enjoy a balanced and vibrant existence.
-          </p>
-          <Author />
         </div>
+        <p className="text-sm mt-3 text-gray-500">
+          Health is a state of complete physical, mental, and social well-being,
+          where one is free from illness, injury, or discomfort. It encompasses
+          not only the absence of disease but also the ability to lead a
+          fulfilling and active life, allowing individuals to reach their full
+          potential and enjoy a balanced and vibrant existence.
+        </p>
+        <Author />
       </div>
     </div>
   );
