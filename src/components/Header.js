@@ -1,9 +1,19 @@
+// "use client";
+// import useAuth from "@/app/hooks/useAuth";
+import useAuth from "@/app/hooks/useAuth";
 import Link from "next/link";
 import React from "react";
 import { ImFacebook, ImTwitter, ImYoutube } from "react-icons/im";
 
 const header = () => {
-  const user = true;
+  const { user, logout } = useAuth;
+  console.log(user);
+
+  const handleLogOut = async () => {
+    await logout();
+    toast.success("Successfully logout!");
+  };
+
   return (
     <header className="bg-gray-50">
       <div className="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-3">
@@ -27,11 +37,20 @@ const header = () => {
           </div>
           {user ? (
             <>
-              <button className="border mx-3 px-2 py-1">Sign Out</button>
+              <Link href={"/pages/signup"}>
+                <button
+                  onClick={handleLogOut}
+                  className="border mx-3 px-2 py-1"
+                >
+                  Sign Out
+                </button>
+              </Link>
             </>
           ) : (
             <>
-              <button className="border mx-3 px-2 py-1">Register</button>
+              <Link href={"/pages/signup"}>
+                <button className="border mx-3 px-2 py-1">Register</button>
+              </Link>
             </>
           )}
         </div>
