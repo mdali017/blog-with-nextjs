@@ -3,6 +3,7 @@ import React from "react";
 import { ImFacebook, ImTwitter, ImYoutube } from "react-icons/im";
 
 const header = () => {
+  const user = true;
   return (
     <header className="bg-gray-50">
       <div className="xl:container xl:mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-3">
@@ -24,6 +25,15 @@ const header = () => {
               <ImYoutube color="#888888" />
             </Link>
           </div>
+          {user ? (
+            <>
+              <button className="border mx-3 px-2 py-1">Sign Out</button>
+            </>
+          ) : (
+            <>
+              <button className="border mx-3 px-2 py-1">Register</button>
+            </>
+          )}
         </div>
       </div>
     </header>
